@@ -18,3 +18,6 @@ kubectl --namespace jenkins \
 
 ## Create Cluster Role
 kubectl apply -f clusterrole.yaml
+
+## Create Cluster Role
+kubectl apply -f registry.yaml
