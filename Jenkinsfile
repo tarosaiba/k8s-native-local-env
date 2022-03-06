@@ -29,8 +29,8 @@ pipeline {
           sh "kubectl get pods -n $PROJECT-${env.BRANCH_NAME.toLowerCase()}"
           sh "kubectl -n $PROJECT-${env.BRANCH_NAME.toLowerCase()} rollout status deployment album-api"
           sh "kubectl get pods -n $PROJECT-${env.BRANCH_NAME.toLowerCase()}"
-          sh "sleep 60"
-          sh "curl http://album-api.$PROJECT-${env.BRANCH_NAME.toLowerCase()}.svc:8080/albums"
+          sh "sleep 10"
+          sh "echo test"
           sh "kubectl delete namespace $PROJECT-${env.BRANCH_NAME.toLowerCase()}"
         }
 
