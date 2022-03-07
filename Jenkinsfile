@@ -11,7 +11,7 @@ pipeline {
       steps {
         container(name: 'kaniko') {
           sh "ls"
-          sh "/kaniko/executor --context `pwd` --insecure --skip-tls-verify --destination registry.jenkins.svc:5000/album-api:latest"
+          sh "/kaniko/executor --context `pwd` --insecure --skip-tls-verify --destination registry.rancher.localhost:5000/album-api:latest"
         }
 
       }
