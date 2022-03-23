@@ -5,6 +5,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  namespace: jenkins
   name: ingress-registry
   labels:
     name: ingress-registry
